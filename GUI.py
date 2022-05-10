@@ -56,6 +56,10 @@ class GUI:
 
 
     def clicked(self):
+        """
+        Method to validate input, put that input into a list, and plug that list into a GPA Calculator function
+        :return:
+        """
         grades = []
         grade1 = self.text_entry1.get()
         grade2 = self.text_entry2.get()
@@ -63,12 +67,24 @@ class GUI:
         grade4 = self.text_entry4.get()
         try:
             grade1 = int(grade1)
+            if grade1 < 0 or grade1 > 100:
+                messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
+                raise Exception('Input should be between 0 and 100')
             try:
                 grade2 = int(grade2)
+                if grade2 < 0 or grade2 > 100:
+                    messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
+                    raise Exception('Input should be between 0 and 100')
                 try:
                     grade3 = int(grade3)
+                    if grade3 < 0 or grade3 > 100:
+                        messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
+                        raise Exception('Input should be between 0 and 100')
                     try:
                         grade4 = int(grade4)
+                        if grade4 < 0 or grade4 > 100:
+                            messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
+                            raise Exception('Input should be between 0 and 100')
                     except ValueError:
                         messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
                 except ValueError:
