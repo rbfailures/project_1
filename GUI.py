@@ -95,8 +95,6 @@ class GUI:
         except ValueError:
             messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
         grades = [grade1, grade2, grade3, grade4]
-        print(grades)
-        print(main.GPA(grades))
         self.text_error.set(f"Your GPA is {main.GPA(grades)}")
 
 
