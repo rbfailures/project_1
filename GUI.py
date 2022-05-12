@@ -54,7 +54,6 @@ class GUI:
         self.frame_error.pack(anchor='w', pady=10)
         self.label_error.pack()
 
-
     def clicked(self):
         """
         Method to validate input, put that input into a list, and plug that list into a GPA Calculator function
@@ -96,6 +95,3 @@ class GUI:
             messagebox.showerror('Invalid input', 'Error: Please enter an integer between 0-100')
         grades = [grade1, grade2, grade3, grade4]
         self.text_error.set(f"Your GPA is {main.GPA(grades)}")
-
-
-

@@ -22,11 +22,5 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(GPA([100, 0, 1, 43]), 1.0, delta=0.001)
 
 
-
-
-
 if __name__ == '__main__':
     unittest.main()
-
-
-
