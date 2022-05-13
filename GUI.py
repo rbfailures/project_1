@@ -64,6 +64,7 @@ class GUI:
         grade2 = self.text_entry2.get()
         grade3 = self.text_entry3.get()
         grade4 = self.text_entry4.get()
+
         try:
             grade1 = int(grade1)
             if grade1 < 0 or grade1 > 100:
